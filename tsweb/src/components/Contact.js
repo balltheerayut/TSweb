@@ -4,11 +4,19 @@ import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { ThemeContext } from "../ThemeContext"; // ใช้ context เพื่อดึง darkMode
+import crycatGif from "../assets/crycat.gif"; // นำเข้า GIF
+import sound from "../assets/cry.mp3"; // นำเข้าไฟล์เสียง MP3
 
 const Contact = () => {
   const { darkMode } = useContext(ThemeContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  // ฟังก์ชันเล่นเสียง
+  const playSound = () => {
+    const audio = new Audio(sound);  // สร้างอ็อบเจ็กต์เสียง
+    audio.play();  // เล่นเสียง
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -88,6 +96,21 @@ const Contact = () => {
           <FacebookIcon fontSize="large" />
         </IconButton>
       </Box>
+
+      {/* เพิ่ม GIF ที่มุมขวาล่าง */}
+      <img
+        src={crycatGif}
+        alt="crycat"
+        onClick={playSound} // เมื่อคลิกที่ GIF จะเล่นเสียง
+        style={{
+          position: "fixed",
+          right: "20px",
+          bottom: "20px",
+          width: "100px",  // ปรับขนาดของ GIF
+          height: "100px", // ปรับขนาดของ GIF
+          cursor: "pointer",  // เปลี่ยน cursor เป็นมือเมื่อ hover
+        }}
+      />
     </Box>
   );
 };

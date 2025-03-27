@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Grid } from "@mui/material";
 import myImage from "../assets/B.jpg"; // ใส่รูป B.jpg
 
@@ -10,13 +10,23 @@ import pythonLogo from "../assets/python.jpg";
 import photoshopLogo from "../assets/photoshop.jpg";
 import sonyVegasLogo from "../assets/sv.jpg";
 
+// นำเข้าไฟล์ gif และ mp3
+import oiaGif from "../assets/oia.gif";
+import oiaSound from "../assets/oiaa.mp3";
+
 const About = () => {
+  const [audio] = useState(new Audio(oiaSound)); // สร้าง Audio object
   const openResume = () => {
     window.open(require("../assets/re.pdf"), "_blank");
   };
 
   const openTranscript = () => {
     window.open(require("../assets/trs.pdf"), "_blank");
+  };
+
+  // ฟังก์ชันสำหรับเล่นเสียง
+  const playSound = () => {
+    audio.play();
   };
 
   return (
@@ -95,6 +105,19 @@ const About = () => {
           <img src={sonyVegasLogo} alt="Sony Vegas" style={{ width: "50px", height: "50px" }} />
         </Grid>
       </Grid>
+
+      {/* GIF ที่มุมขวาล่าง */}
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          cursor: "pointer",
+        }}
+        onClick={playSound} // คลิกที่ GIF เพื่อเล่นเสียง
+      >
+        <img src={oiaGif} alt="OIA GIF" style={{ width: "100px", height: "100px" }} />
+      </Box>
     </Box>
   );
 };
