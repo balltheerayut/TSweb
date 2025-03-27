@@ -10,7 +10,7 @@ const LoadingPage = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        backgroundColor: "rgb(131, 131, 131)", // สีพื้นหลังให้เบลอๆ
+        backgroundColor: "rgb(126, 125, 125)", // สีพื้นหลังให้เบลอๆ
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

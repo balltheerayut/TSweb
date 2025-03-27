@@ -26,16 +26,17 @@ const Home = () => {
         Welcome to My Web Portfolio!
       </Typography>
       <Typography variant="h4" sx={{ mt: 1 }}>
-        ยินดีต้อนรับเข้าสู่เว็ปพอร์ตโฟลิโอ
+        ยินดีต้อนรับสู่เว็ปพอร์ตโฟลิโอ
       </Typography>
-      <Typography variant="body1" sx={{ mt: 2, fontSize: "1.4rem" }}>
+      {/* เพิ่มข้อความต่อจากยินดีต้อนรับ */}
+      <Typography variant="body1" sx={{ mt: 2, fontSize: "1.3rem" }}>
       Hello! My name is Teerayut Sangthong.
       I am a student in the Electronics Technology (ECT) 
-      program at King Mongkut's University of Technology North Bangkok (KMUTNB)
+      program at King Mongkut's University of Technology North Bangkok (KMUTNB).
       </Typography>
-      <Typography variant="body1" sx={{ mt: 1, fontSize: "1.4rem" }}>
+      <Typography variant="body1" sx={{ mt: 2, fontSize: "1.3rem" }}>
       สวัสดี ผมชื่อ ธีรยุทธ สังข์ทอง
-      นักศึกษาสาขาวิชา เทคโนโลยีอิเล็กทรอนิกส์ (ECT)
+      เป็นนักศึกษาสาขาวิชา เทคโนโลยีอิเล็กทรอนิกส์ (ECT)
       ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (KMUTNB)
       </Typography>
     </Box>
