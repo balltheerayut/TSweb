@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       <Toolbar sx={{ minHeight: "90px" }}>
         <Typography variant="h5" sx={{ flexGrow: 1, color: "#fff" }}>
-          My Portfolio
+          Ball Theerayut
         </Typography>
 
         {/* ปุ่ม Dropdown Menu */}
