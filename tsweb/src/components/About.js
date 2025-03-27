@@ -116,7 +116,7 @@ const About = () => {
         }}
         onClick={playSound} // คลิกที่ GIF เพื่อเล่นเสียง
       >
-        <img src={oiaGif} alt="OIA GIF" style={{ width: "100px", height: "100px" }} />
+        <img src={oiaGif} alt="OIA GIF" style={{ width: "150px", height: "150px" }} />
       </Box>
     </Box>
   );
