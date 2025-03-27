@@ -47,7 +47,7 @@ const Navbar = () => {
           sx={{
             fontSize: "1.2rem",
             padding: "12px 24px",
-            borderRadius: "8px",
+            borderRadius: "40px",
             backgroundColor: darkMode ? "#444" : "#eee",
             color: darkMode ? "#fff" : "#000",
             "&:hover": {
@@ -58,7 +58,6 @@ const Navbar = () => {
           Menu
         </Button>
 
-        {/* เมนู Dropdown */}
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
@@ -71,6 +70,12 @@ const Navbar = () => {
             </ListItemIcon>
             Home
           </MenuItem>
+          <MenuItem component={Link} to="/about" onClick={handleMenuClose}>
+            <ListItemIcon>
+              <PersonIcon />
+            </ListItemIcon>
+            About Me
+          </MenuItem >
           <MenuItem component={Link} to="/projects" onClick={handleMenuClose}>
             <ListItemIcon>
               <WorkIcon />
@@ -83,16 +88,7 @@ const Navbar = () => {
             </ListItemIcon>
             Contact
           </MenuItem>
-          {/* เพิ่ม About Me */}
-          <MenuItem component={Link} to="/about" onClick={handleMenuClose}>
-            <ListItemIcon>
-              <PersonIcon />
-            </ListItemIcon>
-            About Me
-          </MenuItem >
         </Menu>
-
-        {/* ปุ่มเลื่อนสำหรับสลับ Dark Mode */}
         <FormControlLabel
           control={
             <Switch
